@@ -1,14 +1,12 @@
-import { Hero } from './hero';
+import { Animal } from './hero';
 
-export const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
+export const ANIMALS: Animal[] = [
+  { name: "Герд", kind_of_animals: "собака", age: "16 лет", weight: "30кг" },
+  { name: "Груня", kind_of_animals: "крыса", age: "1 год 5 месяцев", weight: "413г" },
+  { name: "Соня", kind_of_animals: "крыса", age: "1 год 2 месяца", weight: "360г" },
+  { name: "Петя", kind_of_animals: "крыса", age: "1 год 1 месяц", weight: "372г" },
+  { name: "Тилль", kind_of_animals: "крыса", age: "7 месяцев", weight: "440г" },
+  { name: "Ужин", kind_of_animals: "кролик", age: "2 года", weight: "2кг" },
+  { name: "Робин", kind_of_animals: "улитка", age: "2 года", weight: "250г" },
+  { name: "Чарли", kind_of_animals: "улитка", age: "2 года", weight: "250г" },
 ];

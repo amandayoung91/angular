@@ -1,19 +1,16 @@
-<h2>My Heroes</h2>
+<h2>Мои животные</h2>
 <div *ngIf="selectedVar">
-  <h2>{{selectedVar.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedVar.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedVar.name" placeholder="name">
-    </label>
-  </div>
+  <h2>{{selectedVar.name | uppercase}}</h2>
+  <div><span>Вид: </span>{{selectedVar.kind_of_animals}}</div>
+  <div><span>Возраст: </span>{{selectedVar.age}}</div>
+  <div><span>Вес: </span>{{selectedVar.weight}}</div>
 </div>
 <ul class="heroes">
-  <li *ngFor="let item2 of heroes"
+  <li *ngFor="let item2 of animals"
       [class.selected]="item2 === selectedVar"
       (click)="onSelect(item2)">
-    <span class="badge">{{item2.id}}</span> {{item2.name}}
+    <span class="badge">{{item2.name}}</span> {{item2.kind_of_animals}} - {{item2.age}}, {{item2.weight}}
   </li>
 </ul>
-<pre>{{selectedVar | json}}</pre>
+<!--<pre>{{selectedVar | json}}</pre>-->
 
