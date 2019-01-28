@@ -1,9 +1,24 @@
 <h2>Мои животные</h2>
 <div *ngIf="selectedVar">
   <h2>{{selectedVar.name | uppercase}}</h2>
-  <div><span>Вид: </span>{{selectedVar.kind_of_animals}}</div>
-  <div><span>Возраст: </span>{{selectedVar.age}}</div>
-  <div><span>Вес: </span>{{selectedVar.weight}}</div>
+<div class="item">
+  <label>Вид:
+    <input [(ngModel)]="selectedVar.kind_of_animals" placeholder="name">
+  </label>
+</div>
+<div class="item">
+  <label>Возраст:
+    <input [(ngModel)]="selectedVar.age" placeholder="name">
+  </label>
+</div>
+<div class="item">
+  <label>Вес:
+    <input [(ngModel)]="selectedVar.weight" placeholder="name">
+  </label>
+</div>
+  <!--<div><span>Вид: </span>{{selectedVar.kind_of_animals}}</div>-->
+  <!--<div><span>Возраст: </span>{{selectedVar.age}}</div>-->
+  <!--<div><span>Вес: </span>{{selectedVar.weight}}</div>-->
 </div>
 <ul class="heroes">
   <li *ngFor="let item2 of animals"
