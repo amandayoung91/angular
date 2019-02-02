@@ -1,13 +1,5 @@
 <h2>My Heroes</h2>
-<div *ngIf="selectedVar">
-  <h2>{{selectedVar.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedVar.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedVar.name" placeholder="name">
-    </label>
-  </div>
-</div>
+<app-hero-detail [item2]="selectedVar"></app-hero-detail>
 <ul class="heroes">
   <li *ngFor="let item2 of heroes"
       [class.selected]="item2 === selectedVar"
@@ -15,5 +7,5 @@
     <span class="badge">{{item2.id}}</span> {{item2.name}}
   </li>
 </ul>
-<pre>{{selectedVar | json}}</pre>
+<!--<pre>{{selectedVar | json}}</pre>-->
 
