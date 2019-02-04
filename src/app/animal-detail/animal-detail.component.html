@@ -1,0 +1,18 @@
+<div *ngIf="item2">
+  <h2>{{item2.name | uppercase}}</h2>
+  <div class="item">
+    <label>Вид:
+      <input [(ngModel)]="item2.kind_of_animals" placeholder="kind of animals">
+    </label>
+  </div>
+  <div class="item">
+    <label>Возраст:
+      <input [(ngModel)]="item2.age" placeholder="age">
+    </label>
+  </div>
+  <div class="item">
+    <label>Вес:
+      <input [(ngModel)]="item2.weight" placeholder="weight">
+    </label>
+  </div>
+</div>

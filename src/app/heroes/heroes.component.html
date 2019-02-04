@@ -1,25 +1,5 @@
 <h2>Мои животные</h2>
-<div *ngIf="selectedVar">
-  <h2>{{selectedVar.name | uppercase}}</h2>
-<div class="item">
-  <label>Вид:
-    <input [(ngModel)]="selectedVar.kind_of_animals" placeholder="kind of animals">
-  </label>
-</div>
-<div class="item">
-  <label>Возраст:
-    <input [(ngModel)]="selectedVar.age" placeholder="age">
-  </label>
-</div>
-<div class="item">
-  <label>Вес:
-    <input [(ngModel)]="selectedVar.weight" placeholder="weight">
-  </label>
-</div>
-  <!--<div><span>Вид: </span>{{selectedVar.kind_of_animals}}</div>-->
-  <!--<div><span>Возраст: </span>{{selectedVar.age}}</div>-->
-  <!--<div><span>Вес: </span>{{selectedVar.weight}}</div>-->
-</div>
+<app-animal-detail [item2]="selectedVar"></app-animal-detail>
 <ul class="heroes">
   <li *ngFor="let item2 of animals"
       [class.selected]="item2 === selectedVar"
@@ -27,5 +7,4 @@
     <span class="badge">{{item2.name}}</span> {{item2.kind_of_animals}} - {{item2.age}}, {{item2.weight}}
   </li>
 </ul>
-<!--<pre>{{selectedVar | json}}</pre>-->
 
