@@ -6,12 +6,14 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 import { FormsModule } from '@angular/forms';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    AnimalDetailComponent
+    AnimalDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
