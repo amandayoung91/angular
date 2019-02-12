@@ -1,10 +1,12 @@
 <h2>My Heroes</h2>
-<app-hero-detail [item2]="selectedVar"></app-hero-detail>
+<!--<app-hero-detail [item2]="selectedVar"></app-hero-detail>-->
 <ul class="heroes">
-  <li *ngFor="let item2 of heroes"
-      [class.selected]="item2 === selectedVar"
-      (click)="onSelect(item2)">
-    <span class="badge">{{item2.id}}</span> {{item2.name}}
+  <li *ngFor="let item2 of heroes">
+    <a routerLink="/detail/{{item2.id}}">
+      <!--[class.selected]="item2 === selectedVar"-->
+      <!--(click)="onSelect(item2)"-->
+      <span class="badge">{{item2.id}}</span> {{item2.name}}
+    </a>
   </li>
 </ul>
 <!--<pre>{{selectedVar | json}}</pre>-->

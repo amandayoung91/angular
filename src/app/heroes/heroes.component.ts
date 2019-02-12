@@ -11,10 +11,10 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
   // heroes = HEROES;
   heroes: Hero[];
-  selectedVar: Hero;
-  onSelect(item: Hero): void {
-    this.selectedVar = item;
-  }
+  // selectedVar: Hero;
+  // onSelect(item: Hero): void {
+  //   this.selectedVar = item;
+  // }
 
   constructor(private heroService: HeroService) { }
 
@@ -25,6 +25,10 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes, err => err);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   ngOnInit() {
